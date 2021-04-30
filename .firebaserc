@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "clientpanel-f4ac4": {
+      "hosting": {
+        "hello": [
+          "clientpanel-f4ac4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "clientpanel-f4ac4"
+  }
+}

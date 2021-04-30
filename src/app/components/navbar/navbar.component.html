@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand navbar-dark bg-primary mb-4">
+    <div class="container">
+        <a routerLink="/" class="navbar-brand mx-auto">Catalogues</a>
+    </div>
+</nav>
+<div class="container">
+    <div class="row mb-2">
+        <div class="col-2">Category : </div>
+        <div class="col-4">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    ALL
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">ALL</a>
+                    <a class="dropdown-item" href="#">MODEL 1</a>
+                    <a class="dropdown-item" href="#">MODEL 2</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <ul class="list-unstyled" *ngFor="let p of products">
+        <li class="card card-body mb-3">
+            <div class="row">
+                <div class="col-4">
+                    <img src="../../../assets/image1.jpg" width="100" height="100">
+                </div>
+                <div class="col-8">
+                    <h3>{{p.name}}</h3>
+                    <h3 *ngIf="p.promo">Promo: {{p.promo}}</h3>
+                    <h4>Quantity : {{p.quantity}}</h4>
+                    <h4>Price : {{p.price | currency:"INR"}}</h4>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <button class="btn-primary btn-block" mb-10>SAVE</button>
+    <p></p>
+</div>
